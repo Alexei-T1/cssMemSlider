@@ -93,6 +93,12 @@ body {
     background-color: rgb(0, 225, 255);
     transition: all 0.1s ease;
 }
+.labelButton {
+    display: inline-block;
+    padding: 1rem 0.5rem 1rem;
+    cursor: pointer;
+} 
+
 /* --- For mobile start--- */
 @media only screen and (orientation: portrait), (max-width: 600px) {
     .text__controls__container {
@@ -108,14 +114,16 @@ body {
         width: 3vw;
         height: 3vw;
     }
+    .labelButton {
+        display: inline-block;
+        padding: 0.5rem 0.2rem 0.5rem;
+        cursor: pointer;
+    } 
+    .slider__img {
+        margin-bottom: 1.2rem;
+    }
   }
-/* --- For mobile end--- */
-
-.labelButton {
-    display: inline-block;
-    padding: 1rem 0.5rem 1rem;
-    cursor: pointer;
-}  
+/* --- For mobile end--- */ 
 
 /* --- hover and checked classes for labelButtons--- */
 .circle:hover {
