@@ -80,7 +80,6 @@ body {
     color: white;
     font-size: 2vw;
     display: none;
-    margin-left: 40px;
     visibility: hidden;
 }
 
@@ -94,8 +93,25 @@ body {
     background-color: rgb(0, 225, 255);
     transition: all 0.1s ease;
 }
+/* --- For mobile start--- */
+@media only screen and (orientation: portrait), (max-width: 600px) {
+    .text__controls__container {
+        flex-direction: column;
+    }
+    .text {
+        font-size: 3vw;
+    }
+    .controls__container {
+        margin-left: 0;
+    }
+    .circle {
+        width: 3vw;
+        height: 3vw;
+    }
+  }
+/* --- For mobile end--- */
+
 .labelButton {
-    text-align: right;
     display: inline-block;
     padding: 1rem 0.5rem 1rem;
     cursor: pointer;
