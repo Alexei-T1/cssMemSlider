@@ -1,0 +1,219 @@
+/* default style */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, form, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	background: transparent;
+	box-sizing: border-box;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* CSS MemeM Slider style */
+
+/* ---main containers--- */
+body {
+    background-color: rgba(32, 31, 31, 0.993); 
+}
+.container {
+    padding: 4vh 4vh 0;
+    width: 100%;
+}
+/* ---radio buttons for add checked class to css style--- */
+.radioButton {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --- image containers--- */
+.memSlider__container {
+    margin: 0 auto;
+    width: 35%;
+    overflow: hidden;
+}
+.slider__img {
+    width: 400%;
+    display: flex;
+    margin-bottom: 2.5rem;
+    transition: margin-left 0.4s ease-in-out;
+}
+.slide {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- text and controls container--- */
+.text__controls__container {
+    display: flex;
+    align-items: center;
+}
+.controls__container {
+    margin-left: auto;
+}
+
+.text {
+    color: white;
+    font-size: 2vw;
+    display: none;
+    visibility: hidden;
+}
+
+/* --- controls container with label element for checked radio buttons--- */
+.circle {
+    text-align: center;
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background-color: rgb(0, 225, 255);
+    transition: all 0.1s ease;
+}
+.labelButton {
+    display: inline-block;
+    padding: 1rem 0.5rem 1rem;
+    cursor: pointer;
+} 
+
+/* --- For mobile start--- */
+@media only screen and (orientation: portrait), (max-width: 600px) {
+    .memSlider__container {
+        width: 45%;
+    }
+    .text__controls__container {
+        flex-direction: column;
+    }
+    .text {
+        font-size: 3vw;
+    }
+    .controls__container {
+        margin-left: 0;
+    }
+    .circle {
+        width: 3vw;
+        height: 3vw;
+    }
+    .labelButton {
+        display: inline-block;
+        padding: 0.5rem 0.2rem 0.5rem;
+        cursor: pointer;
+    } 
+    .slider__img {
+        margin-bottom: 1.2rem;
+    }
+  }
+/* --- For mobile end--- */ 
+
+/* --- hover and checked classes for labelButtons--- */
+.circle:hover {
+    background-color: rgb(255, 255, 255);
+}
+#button1:checked ~ .text__controls__container #labelButton1 .circle{
+    background-color: inherit;
+    border: 4px solid rgb(0, 225, 255);
+}
+#button2:checked ~ .text__controls__container #labelButton2 .circle{
+    background-color: inherit;
+    border: 4px solid rgb(0, 225, 255);
+}
+#button3:checked ~ .text__controls__container #labelButton3 .circle{
+    background-color: inherit;
+    border: 4px solid rgb(0, 225, 255);
+}
+#button4:checked ~ .text__controls__container #labelButton4 .circle{
+    background-color: inherit;
+    border: 4px solid rgb(0, 225, 255);
+}
+#button1:checked ~ .text__controls__container #labelButton1 .circle:hover{
+    background-color: inherit;
+    border: 4px solid rgb(255, 225, 255);
+}
+#button2:checked ~ .text__controls__container #labelButton2 .circle:hover{
+    background-color: inherit;
+    border: 4px solid rgb(255, 225, 255);
+}
+#button3:checked ~ .text__controls__container #labelButton3 .circle:hover{
+    background-color: inherit;
+    border: 4px solid rgb(255, 225, 255);
+}
+#button4:checked ~ .text__controls__container #labelButton4 .circle:hover{
+    background-color: inherit;
+    border: 4px solid rgb(255, 225, 255);
+}
+
+/* --- Shift slides--- */
+#button2:checked ~ .slider__img {
+    margin-left: -100%;
+}
+#button3:checked ~ .slider__img {
+    margin-left: -200%;
+}
+#button4:checked ~ .slider__img {
+    margin-left: -300%;
+}
+
+/* --- Shift texts--- */
+
+@keyframes shiftTexts {
+    0%   {display: inline-block;}
+    1%   {opacity: 0.2;}
+    5%  {margin-left: 100px;}
+    100% {visibility: visible; margin-left: 0px; opacity: 1;}
+  }
+
+#button1:checked ~ .text__controls__container #text1{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
+#button2:checked ~ .text__controls__container #text2{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
+#button3:checked ~ .text__controls__container #text3{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
+#button4:checked ~ .text__controls__container #text4{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
