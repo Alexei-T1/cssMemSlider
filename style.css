@@ -80,11 +80,8 @@ body {
     color: white;
     font-size: 2vw;
     display: none;
+    margin-left: 40px;
     visibility: hidden;
-}
-.text-active {
-    display: inline-block;
-    visibility: visible;
 }
 
 /* --- controls container with label element for checked radio buttons--- */
@@ -141,7 +138,7 @@ body {
     border: 4px solid rgb(255, 225, 255);
 }
 
-
+/* --- Shift slides--- */
 #button2:checked ~ .slider__img {
     margin-left: -100%;
 }
@@ -150,4 +147,46 @@ body {
 }
 #button4:checked ~ .slider__img {
     margin-left: -300%;
+}
+
+/* --- Shift texts--- */
+
+@keyframes shiftTexts {
+    0%   {display: inline-block;}
+    1%   {opacity: 0.2;}
+    5%  {margin-left: 100px;}
+    100% {visibility: visible; margin-left: 0px; opacity: 1;}
+  }
+
+#button1:checked ~ .text__controls__container #text1{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
+#button2:checked ~ .text__controls__container #text2{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
+#button3:checked ~ .text__controls__container #text3{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
+}
+#button4:checked ~ .text__controls__container #text4{
+    display: inline-block;
+    margin-left: 0;
+    visibility: visible;
+    animation-name: shiftTexts;
+    animation-duration: 0.9s;
+    animation-timing-function: ease
 }
