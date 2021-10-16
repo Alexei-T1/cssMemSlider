@@ -101,6 +101,9 @@ body {
 
 /* --- For mobile start--- */
 @media only screen and (orientation: portrait), (max-width: 600px) {
+    .memSlider__container {
+        width: 45%;
+    }
     .text__controls__container {
         flex-direction: column;
     }
