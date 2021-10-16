@@ -28,4 +28,31 @@ ol, ul {
 	list-style: none;
 }
 
-/* default style */
+/* CSS MemeM Slider style */
+.container {
+    padding: 10px 0 20px;
+    background-color: rgba(32, 31, 31, 0.993);
+    width: 100%;
+    height: 100vh;
+}
+.radioButton {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.memSlider__container {
+    margin: 0 auto;
+    width: 25%;
+    overflow: hidden;
+}
+.slider__img {
+    width: 400%;
+    display: flex;
+}
+.slide {
+    width: 25%;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+}
